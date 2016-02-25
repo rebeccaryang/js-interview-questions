@@ -15,7 +15,7 @@ I think it's worth going through these links at least once.
 * [Toptal: 25 Tricky JS Questions](http://www.toptal.com/javascript/interview-questions)
 * [Reddit: 10 Questions I’ve been asked for JavaScript Interviews](https://www.reddit.com/r/javascript/comments/3rb88w/ten_questions_ive_been_asked_most_more_than_once/?utm_source=javascriptweekly&utm_medium=email) - the comments section is very helpful
 * [GitHub: The ultimate list of interview question resources](https://github.com/MaximAbramchuck/awesome-interviews) - this has links to not just JS, but Node, React, C++, iOS, Python, databases, etc.
-* [Cracking the Coding Interview Solutions in JavaScript](https://github.com/ECMAScript9000/javascript-cracking-the-code) - this is a repo I started with Nick Fujita (also HR35) - it is meant to include all solutions in JavaScript for Cracking the Coding Interview. If you want to contribute, feel free to join and submit pull requests!
+
 
 # More links:
 
