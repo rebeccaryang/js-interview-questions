@@ -2,19 +2,31 @@
 
 ## Disclaimer
 
-Please keep in mind that you are not expected to have these definitions memorized word for word! As long as you can explain the important points and use examples to show your understanding, it will be fine.
+Please keep in mind that interviewers don't expect you to have definitions memorized word for word! As long as you can explain the important points and use examples to show your understanding, it will be fine.
 
 ## Useful Links
 
-A curated list of resources on interviews and job hunting are [**here**](links.md). Take a look!
+A curated list of resources on interviews and job hunting is [**here**](https://github.com/mi-lee/js-interview-questions/blob/master/resources.md). Take a look!
 
-## Contributing
+## Table of Contents
 
-Please submit a pull request if there are mistakes or changes you would like to see.
+1. [What is a closure?](#1-what-is-a-closure)
+2. [What is the difference between apply, call, and bind?](#2-what-is-the-difference-between-apply-call-and-bind)
+3. [What is event delegation?](#3-what-is-event-delegation)
+4. [What is event bubbling?](#4-what-is-event-bubbling)
+5. [What is hoisting and how does it work?](#5-what-is-hoisting-and-how-does-it-work)
+6. [What does this console?](#6-what-does-this-console)
+7. [What is the prototype chain?](#7-what-is-the-prototype-chain)
+8. [What does this console?](#8a-what-does-this-console)
+9. [Rapid-fire questions!](#9-rapid-fire-questions)
+10. [What determines the value of ‘this’?](#10-what-determines-the-value-of-this)
+11. [What is the event loop?](#11-what-is-the-event-loop)
+12. [What is the output?](#12-what-is-the-output)
+15. [Implement curry.](#15-implement-curry-such-that)
 
 ----------------
 
-# 1. **What is a closure?**
+# 1. What is a closure?
 
 - Access to local variables, parameters, variables in the parent scope, and global variables
 - 'Remembers' the environment in which it was created
@@ -26,12 +38,11 @@ MDN: A "closure" is an expression (typically a function) that can have free vari
 
 Source:
 
-[MDN Definition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [MDN Definition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [Understanding Closures with Ease](http://javascriptissexy.com/understand-javascript-closures-with-ease/)
 
-[Understanding Closures with Ease](http://javascriptissexy.com/understand-javascript-closures-with-ease/)
 
-
-# 2. **What is the difference between apply, call, and bind?**
+# 2. What is the difference between apply, call, and bind?
 
 - Bind allows us to set the `this` value on methods
   - Allows us to borrow methods
@@ -44,12 +55,13 @@ Source:
 
 Source:
 
-[JavaScript’s Apply, Call, and Bind Methods](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+- [JS Is Sexy - JavaScript’s Apply, Call, and Bind Methods](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+- [MDN Bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 
 
 
-# **3. What is event delegation?**
+# 3. What is event delegation?
 
 
 - Event delegation is a strategy where you attach your event handlers to a parent element rather than on multiple child elements
@@ -61,8 +73,9 @@ Source:
 This can simplify things quite a bit, especially when `li` elements are going to be added and removed dynamically. It can be a hassle to manually attach and remove all those individual handlers.
 
 Source:
-[David Walsh - How JavaScript Event Delegation Works](https://davidwalsh.name/event-delegate)
-[Javascript Info - Event Delegation](http://javascript.info/tutorial/event-delegation)
+
+- [David Walsh - How JavaScript Event Delegation Works](https://davidwalsh.name/event-delegate)
+- [Javascript Info - Event Delegation](http://javascript.info/tutorial/event-delegation)
 
 # **4. What is event bubbling?**
 
@@ -79,16 +92,8 @@ Source:
 
 Source:
 
-[JS Info - What is event bubbling and capturing?](http://javascript.info/tutorial/bubbling-and-capturing)
-[Stack Overflow - What is event bubbling and capturing?](https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
-
-## Bonus: How would you stop the bubbling?
-- with vanilla JS: `elem.addEventListener(type, hander, true)`
-  - true: the handler is set on the capturing phase
-  - false: the handler is set on the bubbling phase
-- with jQuery: `event.stopPropogation()`
-
-
+- [JS Info - What is event bubbling and capturing?](http://javascript.info/tutorial/bubbling-and-capturing)
+- [Stack Overflow - What is event bubbling and capturing?](https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
 
 # **5. What is hoisting and how does it work?**
 
@@ -102,7 +107,7 @@ Source:
 
 # 6. What does this console?
 
-```
+```js
 var a = 1;
 
 function b() {
@@ -137,12 +142,13 @@ What is the prototype chain used for?
 - This behaviour is what allows us to create “classes”, and implement inheritance.
 
 Source:
-[MDN - Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-[JS Is Sexy - JavaScript Prototype in Plain Language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
+
+- [MDN - Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JS Is Sexy - JavaScript Prototype in Plain Language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
 
 # 8a What does this console?
 
-```
+```js
 for (var i = 0; i < 5; i++) {
   setTimeout(function() {
     console.log(i)
@@ -162,9 +168,13 @@ Almost simultaneously,
 5
 ```
 
+`i` is 5 because the for loop has completed and exited by the time the callback in setTimeout is called. Since the value of `i` in each callback is not bound to a specific value of i, every callback returns the current value of `i`.
+
+It seems simultaneous because setTimeout delay is set on 0, 1, 2, 3, and 4 ms.
+
 # 8b What does this console?
 
-```
+```js
 for (var i = 0; i < 5; i++) {
   setTimeout(function() {
   	console.log(i)
@@ -184,6 +194,7 @@ for (var i = 0; i < 5; i++) {
 5
 ```
 
+Similar answer as above, but the callback is now being called at 0ms, 500ms, 1s, 1.5s, and 2s.
 
 # 8c How would you turn this code into its intended effect?
 
@@ -201,15 +212,17 @@ with 500ms apart?
 
 ### One answer:
 
-```
+```js
 for (var i = 0; i < 5; i++) {
-	(function(i) {
-		setTimeout(function() {
-			console.log(i);
-		}, i * 500)
-	})(i);
-};
+  (function(i) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 500);
+  })(i);
+}
 ```
+
+Turn it into an IIFE and pass the value of `i` for each one.
 
 
 
@@ -224,7 +237,7 @@ What is ...
 5. `console.log(typeof NaN)`?
 6. `console.log(2+true)`?
 7. `console.log('6'+9)`?
-8. `console.log(4+3+2+"1")`? `91`.
+8. `console.log(4+3+2+"1")`?
 9. `console.log(-'34'+10)`?
 10. `var a = (2, 3, 5); console.log(a)`?
 11. `console.log(3 instanceof Number)`?
@@ -267,7 +280,7 @@ What is ...
 - construction mode (new object created for that invocation)
 
 
-See HR notes on summary of binding patterns for `this` since it is copyrighted material.
+See HR notes on summary of binding patterns for `this` (since it is copyrighted material I won't put it here)
 
 
 
@@ -279,19 +292,19 @@ See HR notes on summary of binding patterns for `this` since it is copyrighted m
 - incoming callbacks are like events that are propagated to the event loop, which checks for new events in the queue and processes them
 - instead of waiting for the results, you can register callbacks that are executed when the event is triggered - so that you can deal with long-taking actions
 
-Resources:
 
-A really good talk that I ***highly*** recommend, especially if you have difficulties with the event loop - **[What the heck is the event loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)**
+I ***highly*** recommend, especially if you have difficulties understanding the event loop and questions like #8 and #14, to watch this video: **[What the heck is the event loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)**
 
-[Altitude Labs - What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)
+Other:
 
-[MDN - Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [Altitude Labs - What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)
+- [MDN - Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 
 # -- Questions taken from [JS By Examples](https://github.com/bmkmanoj/js-by-examples/tree/master/examples) --
 
 # 12. What is the output?
 
-```
+```js
 var name = "John";
 
 (function(){
@@ -315,31 +328,32 @@ Explanation in [JS By Examples](https://github.com/bmkmanoj/js-by-examples/blob/
 
 # 13. What is the output?
 
+```js
 
-```
 var data = [0, 1, 2];
 var funcs = [];
 
-function init() {
+function init() { // 0
   for (var i = 0; i < 3; i++) {
 
-    var x = data[i];
-    var innerFunc = function() {
+    var x = data[i]; // 1
+    var innerFunc = function() { // 2
       return x;
     };
 
-    funcs.push(innerFunc);
+    funcs.push(innerFunc); // 3
   }
 }
 
-function run() {
+function run() { // 4
   for (var i = 0; i < 3; i++) {
-    console.log(data[i] + ", " + funcs[i]());
+    console.log(data[i] + ", " + funcs[i]()); // 5
   }
 }
 
 init();
 run();
+
 ```
 
 ## Answer:
@@ -355,7 +369,7 @@ Detailed solution by [JS By Examples](https://github.com/bmkmanoj/js-by-examples
 
 # 14. What is the output?
 
-```
+```js
 (function() {
   console.log(1);
   setTimeout(function() {
@@ -384,7 +398,7 @@ Solution by [JS Examples](https://github.com/bmkmanoj/js-by-examples/blob/master
 
 # 15. Implement curry such that:
 
-```
+```js
 var add = curry(function(a, b, c) {
   return a + b + c;
 });
@@ -399,9 +413,9 @@ console.log(add(1,2,3));
 
 ### One possible solution
 
-This is just my own solution. I like using [`func.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) because it specifies the number of arguments expected by the function.
+This is just my own solution. Aside: [`func.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) specifies the number of arguments expected by the function.
 
-```
+```js
 var curry = function(func) {
   var totalNumArgs = func.length;
 
