@@ -15,6 +15,8 @@ I think it's worth going through these links at least once.
 
 # More links:
 
+May or may not be helpful - they are here as a resource
+
 ## Front-End
 
 * [Front-End Developer Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) (HTML, CSS, JS, Testing, Performance, Network, Coding)
