@@ -58,7 +58,6 @@ These aren't interview questions but are **very helpful** resources regarding th
 - Projects - why did you choose XYZ framework/database/etc?
 - DOM manipulation, with or without jQuery
 
-(Don't forget that toy problems are the **most** important thing to work on, though!)
 
 ## Other tips
 
