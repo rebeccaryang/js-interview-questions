@@ -57,6 +57,7 @@ These aren't interview questions but are **very helpful** resources regarding th
 - Architecture diagram of my projects
 - Projects - why did you choose XYZ framework/database/etc?
 - DOM manipulation, with or without jQuery
+- In terms of data structures & algos, it's absolutely key to understand arrays, linked lists, trees, and sorting (in my experience)
 
 
 ## Other tips
