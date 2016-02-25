@@ -1,5 +1,9 @@
 # Useful Links
 
+## Disclaimer
+
+Knowledge of JavaScript and CSS is more important for front-end or UI roles than back-end. That being said, it's essential to study toy problems, data structures, and algorithms for all roles. The job description or phone screen should indicate how much you will be asked about these topics.
+
 ## My favourite links
 
 I think it's worth going through these links at least once.
@@ -9,7 +13,7 @@ I think it's worth going through these links at least once.
 * [How To Center in CSS](http://howtocenterincss.com/) (this is **extremely** helpful)
 * [HiredInTech: How to Answer Systems Design Questions](http://www.hiredintech.com/system-design)
 * [Toptal: 25 Tricky JS Questions](http://www.toptal.com/javascript/interview-questions)
-* [Reddit: 10 Questions I’ve been asked for JavaScript Interviews](https://www.reddit.com/r/javascript/comments/3rb88w/ten_questions_ive_been_asked_most_more_than_once/?utm_source=javascriptweekly&utm_medium=email)
+* [Reddit: 10 Questions I’ve been asked for JavaScript Interviews](https://www.reddit.com/r/javascript/comments/3rb88w/ten_questions_ive_been_asked_most_more_than_once/?utm_source=javascriptweekly&utm_medium=email) - the comments section is very helpful
 * [GitHub: The ultimate list of interview question resources](https://github.com/MaximAbramchuck/awesome-interviews) - this has links to not just JS, but Node, React, C++, iOS, Python, databases, etc.
 * [Cracking the Coding Interview Solutions in JavaScript](https://github.com/ECMAScript9000/javascript-cracking-the-code) - this is a repo I started with Nick Fujita (also HR35) - it is meant to include all solutions in JavaScript for Cracking the Coding Interview. If you want to contribute, feel free to join and submit pull requests!
 
@@ -52,6 +56,9 @@ These aren't interview questions but are **very helpful** resources regarding th
 - What is the most difficult technical challenge you faced?
 - Architecture diagram of my projects
 - Projects - why did you choose XYZ framework/database/etc?
+- DOM manipulation, with or without jQuery
+
+(Don't forget that toy problems are the **most** important thing to work on, though!)
 
 ## Other tips
 
